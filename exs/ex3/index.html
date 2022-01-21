@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Components</title>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            #counter {
+                background-color: salmon;
+                display: flex;
+
+            }
+            
+            #counter > button {
+                width: 60px;
+                height: 60px;
+                background-color: forestgreen;
+                border: none;
+                border-radius: 5px;
+                margin: 5px;
+            }
+
+            #counter > div {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        </style>
+
+        <div id="bar"></div>
+
+        <div id="counter">
+            <button onclick="dec()">-</button>
+            <div>1</div>
+            <button onclick="inc()">+</button>
+        </div>
+            <script>
+                var num = 1;
+                function dec(){
+                    num = num - 1;
+                    document.querySelector("#counter > div").innerText = num;
+                    debugger;
+                }
+
+                function inc(){
+                    //debugger;
+                    num = num + 1; 
+                    document.querySelector("#counter > div").innerText = num;
+                }
+            </script>
+
+    </body>
+</html>
